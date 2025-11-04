@@ -15,8 +15,10 @@ git clone https://github.com/xiaorouji/openwrt-passwall-packages --depth=1 clone
 git clone https://github.com/vernesong/OpenClash --depth=1 clone/OpenClash
 
 # Update packages
-cp -rf clone/amlogic/luci-app-amlogic clone/passwall/luci-app-passwall clone/OpenClash/luci-app-openclash feeds/luci/applications/
-cp -rf clone/passwall-packages package/passwall-packages
+cp -rf clone/amlogic/luci-app-amlogic feeds/luci/applications/
+cp -rf clone/passwall/luci-app-passwall feeds/luci/applications/
+cp -rf clone/OpenClash/luci-app-openclash feeds/luci/applications/
+cp -rf clone/passwall-packages package/
 
 #mosdns
 rm -rf feeds/packages/lang/golang
