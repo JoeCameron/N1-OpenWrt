@@ -13,12 +13,14 @@ git clone https://github.com/ophub/luci-app-amlogic --depth=1 clone/amlogic
 git clone https://github.com/xiaorouji/openwrt-passwall --depth=1 clone/passwall
 git clone https://github.com/xiaorouji/openwrt-passwall-packages --depth=1 clone/passwall-packages
 git clone https://github.com/vernesong/OpenClash --depth=1 clone/OpenClash
+git clone https://github.com/jerrykuku/luci-theme-argon --depth=1 clone/luci-theme-argon
 
 # Update packages
 cp -rf clone/amlogic/luci-app-amlogic feeds/luci/applications/
 cp -rf clone/passwall/luci-app-passwall feeds/luci/applications/
 cp -rf clone/OpenClash/luci-app-openclash feeds/luci/applications/
 cp -rf clone/passwall-packages package/
+cp -rf clone/luci-theme-argon feeds/luci/applications/
 
 #mosdns
 rm -rf feeds/packages/lang/golang
