@@ -44,9 +44,10 @@ jobs:
         DEBIAN_FRONTEND: noninteractive
       run: |
         sudo -E apt-get -qq update > /dev/null
-        sudo -E apt-get -qq install -y $(curl -fsSL https://raw.githubusercontent.com/nantayo/My-Pkg/master/2410) > /dev/null
-        sudo -E apt-get -qq autoremove --purge > /dev/null
-        sudo -E apt-get -qq clean > /dev/null
+        curl -s https://build-scripts.immortalwrt.eu.org/init_build_environment.sh | sudo bash
+        #sudo -E apt-get -qq install -y $(curl -fsSL https://raw.githubusercontent.com/nantayo/My-Pkg/master/2410) > /dev/null
+        #sudo -E apt-get -qq autoremove --purge > /dev/null
+        #sudo -E apt-get -qq clean > /dev/null
         sudo timedatectl set-timezone "$TZ"
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
