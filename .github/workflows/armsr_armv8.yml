@@ -16,13 +16,13 @@ on:
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  REPO_URL: https://github.com/immortalwrt/immortalwrt
-  REPO_BRANCH: openwrt-21.02
+  REPO_URL: https://github.com/JoeCameron/immortalwrt-mt798x-6.6
+  REPO_BRANCH: 2410
   TZ: Asia/Shanghai
 
 jobs:
   build:
-    runs-on: ubuntu-24.04
+    runs-on: debian-11
 
     steps:
     - name: Checkout
