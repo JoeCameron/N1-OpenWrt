@@ -5,13 +5,17 @@ patch -p1 -f < $(dirname "$0")/luci.patch
 
 # 移除 openwrt feeds 自带的核心库
 rm -rf feeds/packages/net/{xray-core,v2ray-geodata,sing-box,chinadns-ng,dns2socks,hysteria,ipt2socks,microsocks,naiveproxy,shadowsocks-libev,shadowsocks-rust,shadowsocksr-libev,simple-obfs,tcping,trojan-plus,tuic-client,v2ray-plugin,xray-plugin,geoview,shadow-tls}
+#git clone https://github.com/Openwrt-Passwall/openwrt-passwall-packages package/passwall-packages
+
+# 移除 openwrt feeds 过时的luci版本
 rm -rf feeds/luci/applications/luci-app-passwall
+#git clone https://github.com/Openwrt-Passwall/openwrt-passwall package/passwall-luci
 
 
 # Add packages
 git clone https://github.com/ophub/luci-app-amlogic --depth=1 clone/amlogic
-git clone https://github.com/xiaorouji/openwrt-passwall --depth=1 clone/passwall
-git clone https://github.com/xiaorouji/openwrt-passwall-packages --depth=1 clone/passwall-packages
+git clone https://github.com/Openwrt-Passwall/openwrt-passwall --depth=1 clone/passwall
+git clone https://github.com/Openwrt-Passwall/openwrt-passwall-packages --depth=1 clone/passwall-packages
 git clone https://github.com/vernesong/OpenClash --depth=1 clone/OpenClash
 git clone https://github.com/jerrykuku/luci-theme-argon --depth=1 clone/luci-theme-argon
 
